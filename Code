@@ -1,0 +1,85 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+bool canAbhimanyuCross(vector<int> &enemies,int p, int a, int b) {
+	int currentPower = p;
+	int skip = a;
+	int rechargeRemaining = b;
+	//Iterating over each circle
+	for (int i = 0; i < 11; i++) {
+		int enemyPower = enemies[i];
+                //If Abhimanyu can defeat the enemy then he will fight
+		if (currentPower >= enemyPower) {
+			currentPower -= enemyPower;
+		}//Otherwise he will check for skip or refill himself
+		else
+		{//he will skip then the enemy only if he can not defeat him after refilling
+		    if(enemyPower>p){
+		        if(skip>0) skip--;
+		        else return false;
+		    }//Otherwise he will refill himself and attain his initial power
+		    else{
+		        if(rechargeRemaining>0){
+		            rechargeRemaining--;
+		            currentPower = p;
+		            currentPower -= enemyPower;
+		        } 
+		        else if(skip>0) skip--;
+		        else return false;
+		      
+		    }
+		}
+		//Now checking for the k3 and k7 enemies
+		if(i==2|| i==6){
+		    //they regenerated themselves with half of their initial power
+		    enemyPower = enemies[i]/2;
+		    if (currentPower >= enemyPower) {
+			currentPower -= enemyPower;
+		}else{ 
+		    //Now Abhimanyu has to fight with them also with the same strategy
+		    if(enemyPower>p){
+		        if(skip>0) skip--;
+		        else return false;
+		    }else{
+		        if(rechargeRemaining>0){
+		            rechargeRemaining--;
+		            currentPower = p;
+		            currentPower -= enemyPower;
+		        } 
+		        else if(skip>0) skip--;
+		        else return false;
+		    }
+		}
+		}
+	}
+	//If he came out of circle/vector he won
+	return true;
+}
+
+int main() {
+	vector<int> enemyPowers(11);
+	int initialPower, skips, recharges;
+
+	// Input enemy powers
+	cout << "Enter powers of enemies in 11 circles: ";
+	for (int i = 0; i < 11; i++) {
+		cin >> enemyPowers[i];
+	}
+
+	// Input Abhimanyu's initial power, number of skips, and recharges
+	cout << "Enter Abhimanyu's initial power(p): ";
+	cin >> initialPower;
+
+	cout << "Enter the number of skips(a): ";
+	cin >> skips;
+
+	cout << "Enter the number of recharges:(b) ";
+	cin >> recharges;
+
+	if (canAbhimanyuCross( enemyPowers,initialPower, skips, recharges)) {
+		cout << "Abhimanyu can cross the Chakravyuha.  " << endl;
+	} else {
+		cout << "Abhimanyu cannot cross the Chakravyuha." << endl;
+	}
+	return 0;
+}
