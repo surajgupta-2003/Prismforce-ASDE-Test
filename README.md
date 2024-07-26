@@ -29,5 +29,19 @@ Iterate through each circle, managing Abhimanyu's power, skips, and recharges. F
 The program outputs whether Abhimanyu can cross the Chakravyuha or not. <br>
 
 ### Test Cases and Their Outputs of my Code:
-![image](https://github.com/user-attachments/assets/ce9eac1e-68a6-4ff2-abe8-2974cea62b5b)
+#### Test Case 1: <br>
+Enter powers of enemies in 11 circles: 5 10 20 15 30 25 60 35 45 50 40 <br>
+Enter Abhimanyu's initial power(p): 50 <br>
+Enter the number of skips(a): 3 <br>
+Enter the number of recharges:(b) 5 <br>
+Abhimanyu can cross the Chakravyuha. <br>
+
+#### Test Case 1: <br>
+Enter powers of enemies in 11 circles: 5 10 20 15 30 25 60 35 45 50 40 <br>
+Enter Abhimanyu's initial power(p): 50 <br>
+Enter the number of skips(a): 2 <br>
+Enter the number of recharges:(b) 5 <br>
+Abhimanyu cannot cross the Chakravyuha. <br>
+
+
 
