@@ -26,4 +26,8 @@ Iterate through each circle, managing Abhimanyu's power, skips, and recharges. F
   
 
 ### Output:
-The program outputs whether Abhimanyu can cross the Chakravyuha or not.
+The program outputs whether Abhimanyu can cross the Chakravyuha or not. <br>
+
+### Test Cases and Their Outputs of my Code:
+![image](https://github.com/user-attachments/assets/ce9eac1e-68a6-4ff2-abe8-2974cea62b5b)
+
