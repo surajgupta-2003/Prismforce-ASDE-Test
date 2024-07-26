@@ -12,17 +12,17 @@ The challenge is to determine whether Abhimanyu can cross all 11 circles without
 
 ## Solution Approach
 ### Input Handling:
-1.Read the power levels of enemies from the user.
-2.Read Abhimanyu's initial power, the number of skips, and the number of recharges available.
+1.Read the power levels of enemies from the user. <br>
+2.Read Abhimanyu's initial power, the number of skips, and the number of recharges available. <br>
 ### Simulation of Abhimanyu's Journey:
-Iterate through each circle, managing Abhimanyu's power, skips, and recharges. For each enemy:
-1.Check if Abhimanyu can defeat the enemy with his current power , if he can then defeat the enemy and keep forward.
-2.Otherwise he will check for skip or refill himself depending upon the enemy power:
-  a)Check if after refilling he can defeat the enemy or not , if he cannot defeat the enemy even after refilling himself then if skip available use it otherwise he will LOSE.
+Iterate through each circle, managing Abhimanyu's power, skips, and recharges. For each enemy:<br>
+1.Check if Abhimanyu can defeat the enemy with his current power , if he can then defeat the enemy and keep forward.<br>
+2.Otherwise he will check for skip or refill himself depending upon the enemy power:<br>
+  a)Check if after refilling he can defeat the enemy or not , if he cannot defeat the enemy even after refilling himself then if skip available use it otherwise he will LOSE.<br>
   b)Otherwise if refill available he will refill himself and attain his initial power and defeat the enemy if refill are not available then he will use skip ,if skip is also not 
-  available he will LOSE. 
-3.Special handling for the 3rd and 7th circles where enemies regenerate with half power.
-  Abhimanyu will use the same strategy to fight with them as discussed in 1. and 2.
+  available he will LOSE. <br>
+3.Special handling for the 3rd and 7th circles where enemies regenerate with half power.<br>
+  Abhimanyu will use the same strategy to fight with them as discussed in 1. and 2.<br>
   
 
 ### Output:
