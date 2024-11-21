@@ -1,7 +1,7 @@
 # Abhimanyu's Journey through Chakravyuha
 ## Overview
 This repository contains a C++ solution to a problem inspired by the Mahabharata, where Abhimanyu attempts to cross the Chakravyuha, a complex military formation. The goal is to navigate through 11 circles guarded by enemies, each with a specific power level, and determine if Abhimanyu can successfully cross all the circles.
-
+This is me
 ## Problem Description
 Circles and Enemies: There are 11 circles, each guarded by an enemy with a specified power.
 Abhimanyu's Power: Abhimanyu starts with an initial power (p) and has the ability to skip battles (a skips) or recharge his power (b recharges).
